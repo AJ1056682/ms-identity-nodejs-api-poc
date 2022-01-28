@@ -1,0 +1,37 @@
+{
+    "credentials": {
+        "tenantID": "4f6f5fe5-4b52-4e8d-bc6f-96c27656a790",
+        "clientID": "e9f64af4-6e41-46a2-8cc8-414c715d37f0"
+    },
+    "metadata": {
+        "authority": "login.microsoftonline.com",
+        "discovery": ".well-known/openid-configuration",
+        "version": "v2.0"
+    },
+    "settings": {
+        "validateIssuer": true,
+        "passReqToCallback": false,
+        "loggingLevel": "info"
+    },
+    "protectedRoutes": {
+        "hello": {
+            "endpoint": "/hello",
+            "scopes": ["access_as_super_user","access_as_user"]
+        },
+        "country_dossiers": {
+            "endpoint": "/country/:countryId/dossiers",
+            "scopes": ["access_as_super_user","access_as_user"]
+        },
+        "dossiers": {
+            "endpoint": "/dossiers",
+            "scopes": ["access_as_super_user"]
+        }
+    },
+    "roles": {
+        "ADMIN": "Admin",
+        "BASIC": "User",
+        "GLOBAL_ADMIN": "Global.Admin",
+        "France": "FR",
+        "Brazil": "BR"
+    }
+}
