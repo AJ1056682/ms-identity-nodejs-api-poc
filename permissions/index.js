@@ -1,7 +1,7 @@
 const folder = require('./folders');
-const user = require('./userRoles');
+const common = require('./common');
 
 module.exports = {
     folder,
-    user,
+    common,
 }
