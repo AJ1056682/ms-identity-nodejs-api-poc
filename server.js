@@ -1,11 +1,12 @@
 const express = require('express');
 const morgan = require('morgan');
-
-const { AuthConfig, Data } = require('./Config'); // Import the Authorization.js middleware
-const { folder, user } = require('./permissions');
+const cors = require('cors');
+const { AuthConfig } = require('./Config'); // Import the Authorization.js middleware
+const { folder, common } = require('./permissions');
 
 
 const app = express();
+app.options('*', cors()) // include before other routes
 const auth = new AuthConfig(app);
 
 app.use(auth.setup());
